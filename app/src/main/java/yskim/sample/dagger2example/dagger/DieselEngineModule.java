@@ -24,7 +24,17 @@ public class DieselEngineModule {
 //    abstract Engine bindEngine(DieselEngine engine);
 
     @Provides
-    Engine provideEngine() {
-        return new DieselEngine(horsePower);
+    int provideHorsePower() {
+        return horsePower;
+    }
+
+//    @Provides
+//    Engine provideEngine() {
+//        return new DieselEngine(horsePower);
+//    }
+
+    @Provides
+    Engine provideEngine(DieselEngine engine) {
+        return engine;
     }
 }
