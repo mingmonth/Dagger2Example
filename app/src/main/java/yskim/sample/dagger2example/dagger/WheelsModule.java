@@ -7,7 +7,7 @@ import yskim.sample.dagger2example.car.Tires;
 import yskim.sample.dagger2example.car.Wheels;
 
 @Module
-public class WheelsModule {
+public abstract class WheelsModule {
 
     @Provides
     static Rims provideRims() {
