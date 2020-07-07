@@ -1,6 +1,4 @@
-package yskim.sample.dagger2example;
-
-import javax.inject.Inject;
+package yskim.sample.dagger2example.car;
 
 public class Wheels {
 

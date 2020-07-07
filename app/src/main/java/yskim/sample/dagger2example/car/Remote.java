@@ -1,4 +1,4 @@
-package yskim.sample.dagger2example;
+package yskim.sample.dagger2example.car;
 
 import android.util.Log;
 

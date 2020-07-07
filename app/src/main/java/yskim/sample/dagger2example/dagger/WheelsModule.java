@@ -1,7 +1,10 @@
-package yskim.sample.dagger2example;
+package yskim.sample.dagger2example.dagger;
 
 import dagger.Module;
 import dagger.Provides;
+import yskim.sample.dagger2example.car.Rims;
+import yskim.sample.dagger2example.car.Tires;
+import yskim.sample.dagger2example.car.Wheels;
 
 @Module
 public class WheelsModule {

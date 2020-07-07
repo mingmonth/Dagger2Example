@@ -6,10 +6,15 @@ import android.os.Bundle;
 
 import javax.inject.Inject;
 
+import yskim.sample.dagger2example.car.Car;
+import yskim.sample.dagger2example.dagger.CarComponent;
+import yskim.sample.dagger2example.dagger.DaggerCarComponent;
+
 public class MainActivity extends AppCompatActivity {
 
     //private Car car;
-    @Inject Car car;
+    @Inject
+    Car car;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
