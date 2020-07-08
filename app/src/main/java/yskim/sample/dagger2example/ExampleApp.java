@@ -4,7 +4,7 @@ import android.app.Application;
 
 import yskim.sample.dagger2example.dagger.ActivityComponent;
 import yskim.sample.dagger2example.dagger.AppComponent;
-import yskim.sample.dagger2example.dagger.DaggerActivityComponent;
+//import yskim.sample.dagger2example.dagger.DaggerActivityComponent;
 import yskim.sample.dagger2example.dagger.DaggerAppComponent;
 
 public class ExampleApp extends Application {

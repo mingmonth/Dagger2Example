@@ -8,6 +8,6 @@ import yskim.sample.dagger2example.car.Driver;
 @Singleton
 @Component(modules = DriverModule.class)
 public interface AppComponent {
-
-    Driver getDriver();
+//    Driver getDriver();
+    ActivityComponent getActivityComponent(DieselEngineModule dieselEngineModule);
 }
