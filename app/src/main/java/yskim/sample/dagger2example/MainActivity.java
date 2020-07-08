@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
 //                .appComponent(((ExampleApp) getApplication()).getAppComponent())
 //                .build();
         ActivityComponent component = ((ExampleApp) getApplication()).getAppComponent()
-                .getActivityComponent(new DieselEngineModule(120));
+                .getActivityComponent()
+                .horsePower(150)
+                .engineCapacity((1500))
+                .build();
 
         component.inject(this);
 

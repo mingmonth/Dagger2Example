@@ -12,7 +12,7 @@ import yskim.sample.dagger2example.car.Car;
 @Subcomponent(
         modules = {
         WheelsModule.class,
-        DieselEngineModule.class
+        PetrolEngineModule.class
 })
 public interface ActivityComponent {
 
@@ -20,17 +20,18 @@ public interface ActivityComponent {
 
     void inject(MainActivity mainActivity);
 
-//    @Component.Builder
-//    interface Builder {
-//
-//        @BindsInstance
-//        Builder horsePower(@Named("horse power") int horsePower);
-//
-//        @BindsInstance
-//        Builder engineCapacity(@Named("engine capacity") int engineCapacity);
-//
+    //@Component.Builder
+    @Subcomponent.Builder
+    interface Builder {
+
+        @BindsInstance
+        Builder horsePower(@Named("horse power") int horsePower);
+
+        @BindsInstance
+        Builder engineCapacity(@Named("engine capacity") int engineCapacity);
+
 //        Builder appComponent(AppComponent component);
-//
-//        ActivityComponent build();
-//    }
+
+        ActivityComponent build();
+    }
 }

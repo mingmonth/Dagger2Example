@@ -6,6 +6,7 @@ import dagger.Module;
 import dagger.Provides;
 import yskim.sample.dagger2example.car.Driver;
 
+//@Module(subcomponents = ActivityComponent.class)
 @Module
 public abstract class DriverModule {
 
