@@ -1,19 +1,20 @@
 package yskim.sample.dagger2example.dagger;
 
 import javax.inject.Named;
-import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 import yskim.sample.dagger2example.MainActivity;
 import yskim.sample.dagger2example.car.Car;
 
-@Singleton
-@Component(modules = {
+@PerActivity
+@Component(
+        dependencies = AppComponent.class,
+        modules = {
         WheelsModule.class,
         PetrolEngineModule.class
 })
-public interface CarComponent {
+public interface ActivityComponent {
 
     Car getCar();
 
@@ -28,6 +29,8 @@ public interface CarComponent {
         @BindsInstance
         Builder engineCapacity(@Named("engine capacity") int engineCapacity);
 
-        CarComponent build();
+        Builder appComponent(AppComponent component);
+
+        ActivityComponent build();
     }
 }

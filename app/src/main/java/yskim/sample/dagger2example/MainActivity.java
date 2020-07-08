@@ -2,14 +2,14 @@ package yskim.sample.dagger2example;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import javax.inject.Inject;
 
 import yskim.sample.dagger2example.car.Car;
-import yskim.sample.dagger2example.dagger.CarComponent;
-import yskim.sample.dagger2example.dagger.DaggerCarComponent;
-import yskim.sample.dagger2example.dagger.DieselEngineModule;
+import yskim.sample.dagger2example.dagger.ActivityComponent;
+import yskim.sample.dagger2example.dagger.DaggerActivityComponent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //CarComponent component = DaggerCarComponent.create();
-        CarComponent component = DaggerCarComponent.builder()
-                //.dieselEngineModule(new DieselEngineModule(100))
-                .horsePower(150)
+        //ActivityComponent component = ((ExampleApp) getApplication()).getAppComponent();
+        ActivityComponent component = DaggerActivityComponent.builder()
+                .horsePower(120)
                 .engineCapacity(1400)
+                .appComponent(((ExampleApp) getApplication()).getAppComponent())
                 .build();
+
         component.inject(this);
 
         //car = component.getCar();
