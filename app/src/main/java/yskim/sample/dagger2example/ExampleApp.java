@@ -6,6 +6,7 @@ import yskim.sample.dagger2example.dagger.ActivityComponent;
 import yskim.sample.dagger2example.dagger.AppComponent;
 //import yskim.sample.dagger2example.dagger.DaggerActivityComponent;
 import yskim.sample.dagger2example.dagger.DaggerAppComponent;
+import yskim.sample.dagger2example.dagger.DriverModule;
 
 public class ExampleApp extends Application {
 
@@ -20,7 +21,8 @@ public class ExampleApp extends Application {
 //                .horsePower(120)
 //                .engineCapacity(1400)
 //                .build();
-        component = DaggerAppComponent.create();
+//        component = DaggerAppComponent.create();
+        component = DaggerAppComponent.factory().create(new DriverModule("yskim"));
     }
 
     public AppComponent getAppComponent() {

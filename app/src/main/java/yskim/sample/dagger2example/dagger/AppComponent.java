@@ -9,5 +9,12 @@ import yskim.sample.dagger2example.car.Driver;
 @Component(modules = DriverModule.class)
 public interface AppComponent {
 //    Driver getDriver();
-    ActivityComponent.Builder getActivityComponent();
+//    ActivityComponent.Builder getActivityComponent();
+    ActivityComponent.Factory getActivityComponentFactory();
+
+    @Component.Factory
+    interface Factory {
+
+        AppComponent create(DriverModule driverModule);
+    }
 }

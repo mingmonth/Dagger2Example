@@ -6,7 +6,13 @@ import javax.inject.Singleton;
 //@Singleton
 public class Driver {
 
-//    @Inject
+    String name;
+
+    public Driver(String name) {
+        this.name = name;
+    }
+
+    //    @Inject
 //    public Driver() {
 //
 //    }

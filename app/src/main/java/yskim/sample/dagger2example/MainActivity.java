@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
 //                .appComponent(((ExampleApp) getApplication()).getAppComponent())
 //                .build();
         ActivityComponent component = ((ExampleApp) getApplication()).getAppComponent()
-                .getActivityComponent()
-                .horsePower(150)
-                .engineCapacity((1500))
-                .build();
+//                .getActivityComponent()
+                .getActivityComponentFactory().create(150, 1400);
+//                .horsePower(150)
+//                .engineCapacity((1500))
+//                .build();
 
         component.inject(this);
 
